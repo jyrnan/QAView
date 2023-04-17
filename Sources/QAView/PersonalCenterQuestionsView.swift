@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct PersonalCenterQuestionsView: View {
-  public init()
+  public init() {}
   public var body: some View {
     ScrollView {
       VStack (spacing: 0){
