@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct BackButton: View {
+public struct BackButton: View {
   @Environment(\.presentationMode) var presentationMode
-  var body: some View {
+  public var body: some View {
     Button(action: {
     self.presentationMode.wrappedValue.dismiss()
   }) {
@@ -22,12 +22,12 @@ struct BackButton: View {
   }
 }
 
-struct PersonalCenterMyView: View {
+public struct PersonalCenterMyView: View {
   
-  var toQuestionView: () -> Void
-  var toAboutView: () -> Void
+  public var toQuestionView: () -> Void
+  public var toAboutView: () -> Void
   
-  var body: some View {
+  public var body: some View {
     ZStack {
       Image("Bg_主页背景")
         .resizable()
@@ -96,14 +96,14 @@ struct PersonalCenterMyView: View {
   }
 }
 
-struct PersonalCenterMyView_Previews: PreviewProvider {
-  static var previews: some View {
+public struct PersonalCenterMyView_Previews: PreviewProvider {
+  public static var previews: some View {
     NavigationView {
       PersonalCenterMyView(toQuestionView: {}, toAboutView: {})
     }
   }
 }
 
-extension PersonalCenterMyView {
+public extension PersonalCenterMyView {
   func customNavigationBar() {}
 }

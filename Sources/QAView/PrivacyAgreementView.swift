@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PrivacyAgreementView: View {
+public struct PrivacyAgreementView: View {
   
   // MARK: - 属性
   
@@ -39,7 +39,7 @@ struct PrivacyAgreementView: View {
        
   }
  
-  var body: some View {
+  public var body: some View {
     VStack(spacing: 0) {
       /// 标题
       Text("使用说明")
@@ -165,8 +165,8 @@ struct PrivacyAgreementView: View {
   }
 }
 
-struct PrivacyAgreementView_Previews: PreviewProvider {
-  static var previews: some View {
+public struct PrivacyAgreementView_Previews: PreviewProvider {
+  public static var previews: some View {
     PrivacyAgreementView(agreeClosure: {}, cancelClosure: {}, lisenceClosure: {})
   }
 }

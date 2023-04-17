@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonalCenterQuestionsView: View {
+public struct PersonalCenterQuestionsView: View {
   var body: some View {
     ScrollView {
       VStack (spacing: 0){
@@ -21,8 +21,8 @@ struct PersonalCenterQuestionsView: View {
   }
 }
 
-struct PersonalCenterView_Previews: PreviewProvider {
-  static var previews: some View {
+public struct PersonalCenterView_Previews: PreviewProvider {
+  public static var previews: some View {
     NavigationView {
       PersonalCenterQuestionsView()
         .navigationTitle("常见问题")
@@ -31,12 +31,12 @@ struct PersonalCenterView_Previews: PreviewProvider {
   }
 }
 
-struct CellView: View {
+public struct CellView: View {
   var qaText: QAText
   @State var showContent: Bool = false
   @GestureState var press: Bool = false
   @State var isHover: Bool = false
-  var body: some View {
+  public var body: some View {
     VStack {
       HStack {
 
@@ -88,7 +88,7 @@ struct CellView: View {
 }
 
 
-struct ScrollViewGestureButtonStyle: ButtonStyle {
+public struct ScrollViewGestureButtonStyle: ButtonStyle {
 
     init(
         pressAction: @escaping () -> Void
@@ -107,14 +107,14 @@ struct ScrollViewGestureButtonStyle: ButtonStyle {
     }
 }
 
-struct QAText: Identifiable {
+public struct QAText: Identifiable {
   var id:UUID = UUID()
   var question: String
   var answer: String
 }
 
-extension PersonalCenterQuestionsView {
-  var qATexts: [QAText] {
+public extension PersonalCenterQuestionsView {
+  public var qATexts: [QAText] {
     [
       .init(question: "如何连接设备？",
             answer: "将手机与设备连接同一个WiFi/局域网；点击上方的【连接设备】，即可搜索同一WiFi下的设备，点击具体设备即可连接"),
