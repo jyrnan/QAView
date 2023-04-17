@@ -8,7 +8,8 @@
 import SwiftUI
 
 public struct PersonalCenterQuestionsView: View {
-  var body: some View {
+  public init()
+  public var body: some View {
     ScrollView {
       VStack (spacing: 0){
         ForEach(qATexts) { qaText in
@@ -98,7 +99,7 @@ public struct ScrollViewGestureButtonStyle: ButtonStyle {
 
     private var pressAction: () -> Void
 
-    func makeBody(configuration: Configuration) -> some View {
+  public func makeBody(configuration: Configuration) -> some View {
         // Insert magic here
       configuration.label
         .onChange(of: configuration.isPressed) { newValue in
@@ -108,7 +109,7 @@ public struct ScrollViewGestureButtonStyle: ButtonStyle {
 }
 
 public struct QAText: Identifiable {
-  var id:UUID = UUID()
+  public var id:UUID = UUID()
   var question: String
   var answer: String
 }

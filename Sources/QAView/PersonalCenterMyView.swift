@@ -27,6 +27,11 @@ public struct PersonalCenterMyView: View {
   public var toQuestionView: () -> Void
   public var toAboutView: () -> Void
   
+  public  init(toQuestionView: @escaping () -> Void, toAboutView: @escaping () -> Void) {
+    self.toQuestionView = toQuestionView
+    self.toAboutView = toAboutView
+  }
+  
   public var body: some View {
     ZStack {
       Image("Bg_主页背景")

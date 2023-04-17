@@ -30,7 +30,7 @@ public struct PrivacyAgreementView: View {
   /// 用户协议及隐私跳转action
   var lisenceClosure: () -> Void
   
-  init(agreeClosure: @escaping () -> Void, cancelClosure: @escaping () -> Void, lisenceClosure: @escaping () -> Void) {
+  public init(agreeClosure: @escaping () -> Void, cancelClosure: @escaping () -> Void, lisenceClosure: @escaping () -> Void) {
   
     self.agreeClosure = agreeClosure
     self.cancelClosure = cancelClosure
